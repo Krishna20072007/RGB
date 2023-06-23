@@ -3,7 +3,7 @@ import time
 from openpyxl import Workbook
 from openpyxl.styles import PatternFill, Alignment, Font
 
-end = 25
+end = 255
 
 start_time = time.time()
 
