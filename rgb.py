@@ -1,10 +1,16 @@
+import os
 import time
 from openpyxl import Workbook
 from openpyxl.styles import PatternFill, Alignment, Font
 
-end = 255
+end = 25
 
 start_time = time.time()
+
+# Create folder if it doesn't exist
+folder_path = "Excels"
+if not os.path.exists(folder_path):
+    os.makedirs(folder_path)
 
 wb = Workbook()
 ws = wb.active
@@ -50,7 +56,8 @@ for r in range(0, end + 1):
 
 wb.remove(ws)  # Remove the original "RGB" sheet
 
-wb.save("Excels/rgb.xlsx")
+file_path = os.path.join(folder_path, "rgb.xlsx")
+wb.save(file_path)
 
 end_time = time.time()
 execution_time = end_time - start_time
