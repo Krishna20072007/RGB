@@ -48,7 +48,6 @@ for r in range(0, end + 1):
             if row[0].value == r:
                 new_ws.append([cell.value for cell in row])
 
-        print("Done value of r:", r)
 
 wb.remove(ws)  # Remove the original "RGB" sheet
 
