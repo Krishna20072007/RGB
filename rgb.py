@@ -1,3 +1,4 @@
+print("Starting now")
 import time
 from openpyxl import Workbook
 from openpyxl.styles import PatternFill, Alignment, Font
