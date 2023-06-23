@@ -14,7 +14,7 @@ for r in range(0, end + 1):
     for g in range(0, end + 1):
         for b in range(0, end + 1):
             ws.append([r, g, b])
-            print(f"Appended RGB: R={r}, G={g}, B={b}")  # Print RGB values after appending
+            print(f"Appended RGB: R={r}, G={g}, B={b}")
 
     ws['A1'] = "R"
     ws['B1'] = "G"
