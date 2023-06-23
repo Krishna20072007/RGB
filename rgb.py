@@ -15,19 +15,20 @@ for r in range(0, end + 1):
         for b in range(0, end + 1):
             ws.append([r, g, b])
 
-    ws['A1'] = "R"
-    ws['B1'] = "G"
-    ws['C1'] = "B"
+ws['A1'] = "R"
+ws['B1'] = "G"
+ws['C1'] = "B"
 
-    # Set background color for each row
-    for row in ws.iter_rows(min_row=2, min_col=1, max_col=3):
-        r, g, b = [cell.value for cell in row]
-        color = f"{r:02X}{g:02X}{b:02X}"  # Convert RGB to hexadecimal color
-        fill = PatternFill(start_color=color, end_color=color, fill_type="solid")
-        for cell in row:
-            cell.fill = fill
+# Set background color for each row
+for row in ws.iter_rows(min_row=2, min_col=1, max_col=3):
+    r, g, b = [cell.value for cell in row]
+    color = f"{r:02X}{g:02X}{b:02X}"  # Convert RGB to hexadecimal color
+    fill = PatternFill(start_color=color, end_color=color, fill_type="solid")
+    for cell in row:
+        cell.fill = fill
 
-    # Create separate sheets for each R value
+# Create separate sheets for each R value
+for r in range(0, end + 1):
     new_ws = wb.create_sheet(title=str(r))
     new_ws['A1'] = "R"
     new_ws['B1'] = "G"
@@ -54,4 +55,4 @@ wb.save("Excels/rgb.xlsx")
 end_time = time.time()
 execution_time = end_time - start_time
 
-print(f"It takes {execution_time*100}ms to complete {end} numbers.")
+print(f"It takes {execution_time*1000}ms to complete {end} numbers.")
