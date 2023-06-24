@@ -2,7 +2,7 @@ import openpyxl
 from openpyxl.styles import Font, Alignment
 import os
 
-end = 2
+end = 255
 
 # Create the RGBA_Excels folder if it doesn't exist
 if not os.path.exists('RGBA_Excels'):
