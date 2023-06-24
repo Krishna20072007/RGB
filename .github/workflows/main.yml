@@ -22,12 +22,12 @@ jobs:
 
     - name: Run Python script
       run: |
-        python rgb.py
+        python rgba.py
 
     - name: Commit and push changes
       run: |
         git config --local user.email "krishnakashab@gmail.com"
         git config --local user.name "GitHub Action"
-        git add Excels/
+        git add RGBA_Excels/
         git commit -m "Auto-generated output files"
         git push
