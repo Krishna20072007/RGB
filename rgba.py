@@ -40,7 +40,7 @@ for a in range(0, end + 1):
                 row = (r, g, b, a)
                 sheet.append(row)
 
-            print(f'{r}, {g}, {b}, {a}')
+            print(f'{r},{g},{b},{a}')
 
     # Save the Excel file
     file_name = f'RGBA_Excels/RGBA_{a}.xlsx'
