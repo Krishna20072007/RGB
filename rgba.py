@@ -42,6 +42,9 @@ for a in range(0, end + 1):
 
             print(f'{r},{g},{b},{a}')
 
+        # Remove the RGBA sheet from memory
+        wb.remove(sheet)
+
     # Save the Excel file
     file_name = f'RGBA_Excels/RGBA_{a}.xlsx'
     wb.save(file_name)
