@@ -23,6 +23,8 @@ jobs:
     - name: Run Python script
       run: |
         python rgba.py
+        env:
+          ACTIONS_RUNNER_DEBUG: true
 
     - name: Commit and push changes
       run: |
